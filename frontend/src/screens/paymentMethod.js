@@ -14,7 +14,7 @@ export default function PaymentMethod(){
     } = state;
 
     const [paymentMethodName, setPaymentMethod] = useState(
-        paymentMethod || 'Paypal'
+        paymentMethod || 'Paypal' 
     ); 
     useEffect( () => {
         if(!shippingAddress){
@@ -53,6 +53,15 @@ export default function PaymentMethod(){
                     label ="netBanking"
                     value = "Net Banking"
                     checked={paymentMethodName === 'Net Banking'}
+                    onChange = {(e) => setPaymentMethod(e.target.value) } /> 
+                </div> 
+                <div className="mb-3">
+                    <Form.Check
+                    type ="radio"
+                    id ="cashOnDelivery"
+                    label ="cash On Delivery"
+                    value = "Cash On Delivery"
+                    checked={paymentMethodName === 'Cash On Delivery'}
                     onChange = {(e) => setPaymentMethod(e.target.value) } /> 
                 </div>
                 <div className="mb-3">

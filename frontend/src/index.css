@@ -101,6 +101,7 @@ header{background: #000; padding: 0px 0;}
   display: inline-block;
   color: #000;
   text-decoration: none;
+  border:0px;
 }
 .btnBuy:hover {
   background: #d61920;
@@ -212,6 +213,7 @@ header{background: #000; padding: 0px 0;}
   border-radius: 50px;
   font-weight: 700;
   font-size: 18px;
+  border: 0px;
 }
 .cartImg{max-width: 80px; padding: 0px;}
 .buy:disabled, .cartList .buy:disabled{opacity: .75;}

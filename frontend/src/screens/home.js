@@ -1,7 +1,6 @@
 //import data from '../data';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination} from 'swiper';
-import { Link } from 'react-router-dom';
+import { Navigation, Pagination} from 'swiper'; 
 import logger from 'use-reducer-logger';
 import {Helmet} from 'react-helmet-async';
 import { useEffect, useReducer, useState } from 'react';
@@ -66,7 +65,7 @@ export function HomeScreen()  {
       pagination={{ clickable: true }} 
         >
           {Slides.map((slide) => (
-          <SwiperSlide key={slide._id}><Link to="product/mk-lk-mk"><img src={slide.slideImg} alt="slides"/></Link></SwiperSlide> 
+          <SwiperSlide key={slide._id}> <img src={slide.slideImg} alt="slides"/> </SwiperSlide> 
           ))
         }
         </Swiper>  
@@ -101,53 +100,9 @@ export function HomeScreen()  {
     </Swiper> 
     </section>
     <div className="separator"></div>
-    <section className="product"> 
-          <div className="heading text-center"><h2>Bluetooth Speakers</h2></div>
-            <Swiper
-          modules={[Navigation]}
-          spaceBetween={30}
-          slidesPerView={4.2} 
-          navigation 
-        >
-{loading? (
-        <div>Loading...</div>
-      ): error ? (
-        <div>{Error}</div>
-      ) : (
-        products.filter((byCat) => byCat.category === 'Bluetooth Speakers').map((product) => (
-                  <SwiperSlide key={product._id}> 
-               <Products product={product}/>
-                   
-                   </SwiperSlide> 
-               
-          ))
-          )}
-        </Swiper> 
-        </section>
+     
     <div className="separator"></div>
-    <section className="product"> 
-          <div className="heading text-center"><h2>Power Banks</h2></div>
-            <Swiper
-          modules={[Navigation]}
-          spaceBetween={30}
-          slidesPerView={4.2} 
-          navigation 
-        >
-{loading? (
-        <div>Loading...</div>
-      ): error ? (
-        <div>{Error}</div>
-      ) : (
-        products.filter((byCat) => byCat.category === 'Power Banks').map((product) => (
-          
-                <SwiperSlide key={product._id}> 
-         <Products product={product}/>
-                 </SwiperSlide> 
-              
-        ))
-          )}
-        </Swiper> 
-        </section>
+   
       </div>
     )
 }

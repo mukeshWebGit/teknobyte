@@ -4,8 +4,8 @@ const productSchema = new mongoose.Schema(
        // _id:{type:String},
         category: {type:String, },
         productOrder: {type:Number,   },
-        name: {type:String, required:true, unique:true, },
-        slug: {type:String, required:true, unique:true},
+        name: {type:String, required:true, },
+        slug: {type:String, required:true},
         image: {type:String, required:true},
         imageBig: {type:String, required:true},
         price: {type:Number, required:true},
@@ -31,7 +31,6 @@ const productSchema = new mongoose.Schema(
             color: {type:String},
             'Net Weight': {type:String},
         }
-
     },
     {
         timestamps:true

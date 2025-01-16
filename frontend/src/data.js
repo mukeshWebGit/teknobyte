@@ -26,11 +26,11 @@ const data = {
             pColor : 'black',
             color: [
                 {colorName: 'black',
-                colorImg :  'http://www.teknobyte.com/images/powerBank/powerBankBlackSmall.jpg', 
+                colorImg :  'https://teknobyte.com/images/powerBank/powerBankBlackSmall.jpg', 
                 gallery :  '/images/bigProduct/powerBankBlackBig.jpg', 
                 },
                 {colorName: 'white',
-                colorImg :  'http://www.teknobyte.com/images/powerBank/powerBankWhiteSmall.jpg', 
+                colorImg :  'https://teknobyte.com/images/powerBank/powerBankWhiteSmall.jpg', 
                 gallery :  '/images/bigProduct/powerBankWhiteBig.jpg', 
                 }
             ], 
@@ -93,20 +93,20 @@ const data = {
             name: 'Bluetooth Speaker TUR',  
             slug: 'bluetooth-speaker-TUR',
             image: '/images/tur.png',
-            imageBig: 'http://www.teknobyte.com/images/speaker/turoBlueBig.png',
+            imageBig: 'https://teknobyte.com/images/speaker/turoBlueBig.png',
             pColor : 'blue',
             color:[
                 {colorName: 'blue' ,
                 colorImg :  '/images/TUR_blue.png',
-                gallery: 'http://www.teknobyte.com/images/speaker/turoBlueBig.png'
+                gallery: 'https://teknobyte.com/images/speaker/turoBlueBig.png'
                 },
                 {colorName: 'black' ,
                 colorImg :  '/images/TUR_black.png',
-                gallery: 'http://www.teknobyte.com/images/speaker/turoBlackBig.png'
+                gallery: 'https://teknobyte.com/images/speaker/turoBlackBig.png'
                 },
                 {colorName: 'green',
                 colorImg :  '/images/TUR_green.png',
-                gallery : 'http://www.teknobyte.com/images/speaker/turoGreenBig.png'
+                gallery : 'https://teknobyte.com/images/speaker/turoGreenBig.png'
                 }
             ],
             price: 2999,
@@ -128,16 +128,16 @@ const data = {
             name: 'Bluetooth Speaker B01.3', 
             slug: 'bluetooth-speaker-B01.3',
             image: '/images/B01-3.png',
-            imageBig: 'http://www.teknobyte.com/images/speaker/bo1BlueBig.jpg',
+            imageBig: 'https://teknobyte.com/images/speaker/bo1BlueBig.jpg',
             pColor : 'blue',
             color:[
                     {colorName: 'blue' ,
-                    colorImg :  'http://www.teknobyte.com/images/speaker/bo1BlueSmall.jpg',
-                    gallery: 'http://www.teknobyte.com/images/speaker/bo1BlueBig.jpg',
+                    colorImg :  'https://teknobyte.com/images/speaker/bo1BlueSmall.jpg',
+                    gallery: 'https://teknobyte.com/images/speaker/bo1BlueBig.jpg',
                     },
                     {colorName: 'grey' ,
-                    colorImg :  'http://www.teknobyte.com/images/speaker/bo1SilverSmall.jpg',
-                    gallery : 'http://www.teknobyte.com/images/speaker/bo1SilverBig.jpg'
+                    colorImg :  'https://teknobyte.com/images/speaker/bo1SilverSmall.jpg',
+                    gallery : 'https://teknobyte.com/images/speaker/bo1SilverBig.jpg'
                     }
                   ],
             price: 1999,

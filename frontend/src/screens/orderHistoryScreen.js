@@ -1,11 +1,12 @@
 import React, { useContext, useEffect, useReducer } from 'react';
 import { Helmet } from 'react-helmet-async';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
-import LoadingBox from '../components/LoadingBox';
-import MessageBox from '../components/MessageBox';
+import { useNavigate } from 'react-router-dom'; 
 import { Store } from '../Store';
 import { getError } from '../utils';
+import Button from 'react-bootstrap/esm/Button';
+import LoadingBox from '../component/LoadingBox';
+import MessageBox from '../component/MessageBox';
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -49,7 +50,7 @@ export default function OrderHistoryScreen() {
     fetchData();
   }, [userInfo]);
   return (
-    <div>
+    <div className='container '>
       <Helmet>
         <title>Order History</title>
       </Helmet>
