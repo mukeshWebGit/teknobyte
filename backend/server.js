@@ -10,6 +10,7 @@ import userRouter from './routes/userRoutes.js';
 import orderRouter from './routes/orderRoutes.js';
 
 dotenv.config();  
+mongoose.set("strictQuery", false);
 mongoose.connect(process.env.MONGOBD_URI).then(() => {
   console.log('conected to DB');
 }).catch(err => {
