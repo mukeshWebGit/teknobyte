@@ -91,9 +91,7 @@ export function HomeScreen()  {
        
                 <SwiperSlide key={product._id}> 
                   <Products product={product}/>
-                  </SwiperSlide> 
-               
-        
+                  </SwiperSlide>  
       
       ))
       )}
