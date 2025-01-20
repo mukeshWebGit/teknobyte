@@ -37,14 +37,14 @@ export function HomeScreen()  {
         dispatch({ type: 'FETCH_REQUEST' });
         
       try {
-        const result = await axios.get('https://teknobyte-api.vercel.app/api/products');
+        const result = await axios.get('/api/products');
         dispatch({ type: 'FETCH_SUCCESS', payload: result.data }); 
       } catch (err) {
         dispatch({ type: 'FETCH_FAIL', payload: err.message });
       } 
       
         //setProducts(result.data);
-        const resultSlide = await axios.get('https://teknobyte-api.vercel.app/api/slides');
+        const resultSlide = await axios.get('/api/slides');
         setSlides(resultSlide.data);
        // setSlides(data.slides);
       }; 
