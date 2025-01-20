@@ -29,7 +29,9 @@ export function HomeScreen()  {
     loading: true,
     error: '',
   }); 
- 
+  const backendUrl = process.env.REACT_APP_API_URL;
+
+  
    // const [products, setProducts] = useState([]);
     const [Slides, setSlides] = useState([]); 
     useEffect(() => {
@@ -37,26 +39,25 @@ export function HomeScreen()  {
         dispatch({ type: 'FETCH_REQUEST' });
         
       try {
-        const result = await axios.get('/api/products');
+        const result = await axios.get(`${backendUrl}api/products`);
         dispatch({ type: 'FETCH_SUCCESS', payload: result.data }); 
       } catch (err) {
         dispatch({ type: 'FETCH_FAIL', payload: err.message });
       } 
       
         //setProducts(result.data);
-        const resultSlide = await axios.get('/api/slides');
+        const resultSlide = await axios.get(`${backendUrl}api/slides`);
         setSlides(resultSlide.data);
        // setSlides(data.slides);
       }; 
       fetchData();
-    }, []); 
+    }, [backendUrl]); 
      
     return(
      
       <div>
       <Helmet> <title>Teknobyte</title></Helmet>
-        <section className="slider">
-        
+        <section className="slider"> 
           <Swiper
           modules={[Navigation, Pagination]}
           spaceBetween={50}

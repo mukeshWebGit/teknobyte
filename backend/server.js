@@ -8,6 +8,8 @@ import slidesRouter from './routes/slidesRoutes.js';
 import categoriesRouter from './routes/categoriesRoutes.js';
 import userRouter from './routes/userRoutes.js';
 import orderRouter from './routes/orderRoutes.js';
+import cors from 'cors';
+import bodyParser from 'body-parser';
 
 dotenv.config();  
 mongoose.set("strictQuery", false);
@@ -17,7 +19,9 @@ mongoose.connect(process.env.MONGOBD_URI).then(() => {
   console.log(err.message);
 })
 
-const app = express();
+const app = express(); 
+app.use(cors());
+app.use(bodyParser.json());
 app.use(express.json());
 app.use(express.urlencoded({extended:true}))
 app.get('/api/keys/paypal', (req, res) => {
