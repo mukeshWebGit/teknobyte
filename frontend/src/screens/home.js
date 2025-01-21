@@ -31,22 +31,23 @@ export function HomeScreen()  {
   }); 
   const backendUrl = process.env.REACT_APP_API_URL;
 
-  
+   console.log(backendUrl);
    // const [products, setProducts] = useState([]);
     const [Slides, setSlides] = useState([]); 
     useEffect(() => {
       const fetchData = async () => {
         dispatch({ type: 'FETCH_REQUEST' });
         
-      try {
-        const result = await axios.get(`${backendUrl}api/products`);
+      try { 
+        const result = await axios.get(`${backendUrl}/api/products`); 
         dispatch({ type: 'FETCH_SUCCESS', payload: result.data }); 
       } catch (err) {
         dispatch({ type: 'FETCH_FAIL', payload: err.message });
       } 
       
         //setProducts(result.data);
-        const resultSlide = await axios.get(`${backendUrl}api/slides`);
+        const resultSlide = await axios.get(`${backendUrl}/api/slides`);
+        
         setSlides(resultSlide.data);
        // setSlides(data.slides);
       }; 
