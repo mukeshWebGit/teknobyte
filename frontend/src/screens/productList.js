@@ -24,22 +24,23 @@ export const ProductList = () => {
         loading: true,
         error: '',
       }); 
+      const backendUrl = process.env.REACT_APP_API_URL;
       const [category, setCategory] = useState([]);
         useEffect(() => {
           const fetchData = async () => {
             dispatch({ type: 'FETCH_REQUEST' });
             
           try {
-            const result = await axios.get('/api/products');
+            const result = await axios.get(`${backendUrl}/api/products`);
             dispatch({ type: 'FETCH_SUCCESS', payload: result.data });
           } catch (err) {
             dispatch({ type: 'FETCH_FAIL', payload: err.message });
           } 
-          const resultCategory = await axios.get('/api/categories');
+          const resultCategory = await axios.get(`${backendUrl}/api/categories`);
           setCategory(resultCategory.data);
           }; 
           fetchData();
-        }, []);  
+        }, [backendUrl]);  
       const params = useParams();  
 
        

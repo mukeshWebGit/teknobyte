@@ -32,21 +32,22 @@ export const ProductDetails = () => {
   });
   const proCatId = product.category;
   const [category, setCategory] = useState([]);
+  const backendUrl = process.env.REACT_APP_API_URL;
   useEffect(() => {
     const fetchData = async () => {
       dispatch({ type: 'FETCH_REQUEST' });
       try {
-        const result = await axios.get(`/api/products/slug/${slug}`);
+        const result = await axios.get(`${backendUrl}/api/products/slug/${slug}`);
         dispatch({ type: 'FETCH_SUCCESS', payload: result.data });
       } catch (err) {
         dispatch({ type: 'FETCH_FAIL', payload: err.message });
       }
-      const resultCategory = await axios.get('/api/categories');
+      const resultCategory = await axios.get(`${backendUrl}/api/categories`);
       setCategory(resultCategory.data);
     };
     fetchData();
     
-  }, [slug]);
+  }, [slug, backendUrl]);
   const { state, dispatch: ctxDispatch } = useContext(Store);
   const { cart } = state;
   const addToCartHandler = () => {
