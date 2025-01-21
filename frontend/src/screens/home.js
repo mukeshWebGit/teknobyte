@@ -31,7 +31,6 @@ export function HomeScreen()  {
   }); 
   const backendUrl = process.env.REACT_APP_API_URL;
 
-   console.log(backendUrl);
    // const [products, setProducts] = useState([]);
     const [Slides, setSlides] = useState([]); 
     useEffect(() => {

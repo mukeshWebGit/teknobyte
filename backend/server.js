@@ -11,7 +11,7 @@ import orderRouter from './routes/orderRoutes.js';
 import cors from 'cors'; 
 
 dotenv.config();  
-mongoose.set("strictQuery", false);
+mongoose.set("strictQuery", false); 
 mongoose.connect(process.env.MONGOBD_URI).then(() => {
   console.log('conected to DB');
 }).catch(err => {
