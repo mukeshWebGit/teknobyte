@@ -20,6 +20,9 @@ export default function SignupScreen(){
     const [confirmPassword, setConfirmPassword] = useState();
     const {state, dispatch:ctxDispatch} = useContext(Store);
     const { userInfo } = state;
+
+    const backendUrl = process.env.REACT_APP_API_URL;
+
     const submitHandler = async (e) => { 
       e.preventDefault();
       if(password !== confirmPassword){
@@ -27,7 +30,7 @@ export default function SignupScreen(){
         return;
       }
       try{
-        const {data} = await Axios.post('/api/users/signup', { 
+        const {data} = await Axios.post(`${backendUrl}/api/users/signup`, { 
           name,
           email,
           password,

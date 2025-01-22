@@ -66,7 +66,8 @@ export function HomeScreen()  {
       pagination={{ clickable: true }} 
         >
           {Slides.map((slide) => (
-          <SwiperSlide key={slide._id}> <img src={slide.slideImg} alt="slides"/> </SwiperSlide> 
+            
+          <SwiperSlide key={slide._id}> <p>{slide._id}</p><img src={slide.slideImg} alt="slides"/> </SwiperSlide> 
           ))
         }
         </Swiper>  

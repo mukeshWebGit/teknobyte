@@ -24,10 +24,10 @@ export const Header = () => {
       });
         //navigate(`search?key=${searchField}`);
       }
-      
+      const backendUrl = process.env.REACT_APP_API_URL;
   useEffect(() => {
     const fetchData = async () => { 
-      const resultCategory = await axios.get('/api/categories');
+      const resultCategory = await axios.get(`${backendUrl}/api/categories`);
       setCategory(resultCategory.data); 
     };
     fetchData();

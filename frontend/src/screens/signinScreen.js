@@ -19,10 +19,11 @@ export default function SigninScreen(){
     const [password, setPassword] = useState();
     const {state, dispatch:ctxDispatch} = useContext(Store);
     const { userInfo } = state;
+    const backendUrl = process.env.REACT_APP_API_URL;
     const submitHandler = async (e) => { 
       e.preventDefault();
       try{
-        const {data} = await Axios.post('/api/users/signin', { 
+        const {data} = await Axios.post(`${backendUrl}/api/users/signin`, { 
           email,
           password,
         });
