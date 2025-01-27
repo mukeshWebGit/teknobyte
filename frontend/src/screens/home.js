@@ -38,7 +38,7 @@ export function HomeScreen()  {
         dispatch({ type: 'FETCH_REQUEST' });
         
       try { 
-        const result = await axios.get(`${backendUrl}/api/products`); 
+        const result = await axios.get(`${backendUrl}/api/products`);  
         dispatch({ type: 'FETCH_SUCCESS', payload: result.data }); 
       } catch (err) {
         dispatch({ type: 'FETCH_FAIL', payload: err.message });
@@ -67,7 +67,7 @@ export function HomeScreen()  {
         >
           {Slides.map((slide) => (
             
-          <SwiperSlide key={slide._id}> <p>{slide._id}</p><img src={slide.slideImg} alt="slides"/> </SwiperSlide> 
+          <SwiperSlide key={slide._id}> <img src={slide.slideImg} alt="slides"/> </SwiperSlide> 
           ))
         }
         </Swiper>  

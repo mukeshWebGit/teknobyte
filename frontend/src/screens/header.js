@@ -32,7 +32,7 @@ export const Header = () => {
     };
     fetchData();
    
-  },[]); 
+  },[backendUrl]); 
   const {state, dispatch:ctxdispatch} = useContext(Store);
   const {cart, userInfo} = state;
 
