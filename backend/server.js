@@ -11,7 +11,7 @@ import orderRouter from './routes/orderRoutes.js';
 import cors from 'cors'; 
 
 dotenv.config();  
-mongoose.set("strictQuery", true); 
+mongoose.set("strictQuery", false); 
 mongoose.connect(process.env.MONGOBD_URI).then(() => {
   console.log('conected to DB');
 }).catch(err => {
@@ -19,7 +19,8 @@ mongoose.connect(process.env.MONGOBD_URI).then(() => {
 })
 
 const app = express(); 
-app.options('*', cors());
+//app.options('*', cors());
+app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({extended:true}))
 app.get('/api/keys/paypal', (req, res) => {

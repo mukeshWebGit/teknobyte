@@ -25,6 +25,7 @@ export const ProductList = () => {
         error: '',
       }); 
       const backendUrl = process.env.REACT_APP_API_URL;
+      const [sidebarIsOpen, setSidebarIsOpen] = useState(false);
       const [category, setCategory] = useState([]);
         useEffect(() => {
           const fetchData = async () => {
@@ -55,9 +56,11 @@ export const ProductList = () => {
           </div> 
       ))
       }   </section>
-        <section className="product"> 
-        <div className="container product_list">
-       
+        <section className={sidebarIsOpen?'product active-cont'
+          :'product'
+        }> 
+        <div className="container test product_list">
+       <button onClick={() => setSidebarIsOpen(!setSidebarIsOpen)}> <i className='fas fa-bars'></i></button>
         <div className="row text-center">
 {loading? (
       <div>Loading...</div>

@@ -18,7 +18,7 @@
     "express-async-handler": "^1.2.0",
     "jsonwebtoken": "^9.0.0",
     "jwt-decode": "^3.1.2",
-    "mongoose": "^6.7.3",
+    "mongoose": "^8.3.4",
     "use-reducer-logger": "^1.0.2"
   },
   "devDependencies": {

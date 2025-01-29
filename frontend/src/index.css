@@ -232,3 +232,8 @@ font-size: 11px;}
 .checkoutSteps > div {border-bottom:1px solid #ddd; color: a0a0a0; padding-top: 5px;  padding-bottom: 5px; }
 .checkoutSteps > div.active {border-bottom:2px solid #f08000; color: #f08000; }
 .buyed .img-thumbnail{max-width: 50px;}
+.active-cont{margin-left: 240px;}
+.active-nav{left: 0px;}
+.product{transition: .4s;}
+.sidebarNav{width:240px;height: 100%; position: absolute; left: -300px; background-color: #fff; color:#000; transition: .06s;}
+.navBrand{font-weight: 600;}
